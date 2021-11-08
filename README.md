@@ -1,9 +1,9 @@
 # keras_softarch_assignment
 ### TO-DO list:
 
-1. หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้ - ยังไม่ได้ทำ
-	* วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา - ยังไม่ได้ทำ
-	* หาข้อเสียอย่างน้อย 1 จุดของ Architectural Stylesและนำเสนอวิธีการแก้ไขข้อเสียตรงนั้น - ยังไม่ได้ทำ
+1. หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้ - ## ยังไม่ได้ทำ
+	* วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา - ## ยังไม่ได้ทำ
+	* หาข้อเสียอย่างน้อย 1 จุดของ Architectural Stylesและนำเสนอวิธีการแก้ไขข้อเสียตรงนั้น - ## ยังไม่ได้ทำ
 	
 2. หาและอธิบาย quality attributes ของ keras อย่างน้อย 3 ตัวโดยรายละเอียดมีดังนี้: - ยังไม่ได้ทำ
 	* ให้เหตุผลว่าทำไมคนสร้าง kerasถึงเลือกใช้ quality attributes ตัวนี้
