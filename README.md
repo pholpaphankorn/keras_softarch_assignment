@@ -1,5 +1,5 @@
 # keras_softarch_assignment
-to-do list:
+###to-do list:
 
 1.หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้ - ยังไม่ได้ทำ
 	1.1วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา - ยังไม่ได้ทำ
