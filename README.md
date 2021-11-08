@@ -10,7 +10,7 @@
 	* [ ] หาและอธิบายว่าคนสร้าง kerasใช้วิธีการอะไรในการทำให้ตอบโจทย์ quality attributes ตัวนั้น
 	* [ ] หาหลักฐานมา support ข้อ 1 และ 2(อาจจะเป็น documentationหรือ source code โดยระบุ link และ บรรทัด code) 
 	
-3. (เจอแล้ว3ตัว)หา design pattern 4 ตัวโดยรายละเอียดมีดังนี้:
+3. (เจอแล้ว4ตัว)หา design pattern 4 ตัวโดยรายละเอียดมีดังนี้:
 	* [ ] อธิบายว่าทำไมแต่ละตัวถึงถูกใช้ใน keras มันเหมาะสมกันยังไง
 	* [ ] ระบุ source file และบรรทัด code
 	* [ ] (optional-มีไม่มีก็ได้) documentation หรือ commend ของ developer
@@ -25,3 +25,4 @@
 	1. Decorator(class Wrappers) - https://github.com/keras-team/keras/blob/3a33d53ea4aca312c5ad650b4883d9bac608a32e/keras/layers/wrappers.py#L34
 	2. Iterator(class Iterator) - https://github.com/keras-team/keras/blob/v2.6.0/keras/preprocessing/image.py#L318-L319
 	3. Composite(class Sequential) - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/sequential.py#L41-L467
+	4. Adapter(class DataAdapter) - https://github.com/keras-team/keras/blob/3a33d53ea4aca312c5ad650b4883d9bac608a32e/keras/engine/data_adapter.py#L40
