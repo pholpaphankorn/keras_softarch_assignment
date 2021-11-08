@@ -22,7 +22,6 @@
 	* อธิบายผลลัพธ์จากการวิเคราะห์ design pattern ของ keras และให้ดู UML diagram หรือ code บางส่วน
 
 ### Design pattern ที่หาเจอและถูกต้อง:
-	1. Decorator - https://github.com/keras-team/keras/blob/3a33d53ea4aca312c5ad650b4883d9bac608a32e/keras/layers/wrappers.py#L34
-	2. Iterator - https://github.com/keras-team/keras/blob/v2.6.0/keras/preprocessing/image.py#L318-L319
-### Design pattern ที่หาเจอและแต่ไม่ถูกต้อง:
-	1. ใช้ไม่ได้เพราะ sequential เก็บ sequential ด้วยกันเองไม่ได้ Composite - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/sequential.py#L41-L467
+	1. Decorator(class Wrappers) - https://github.com/keras-team/keras/blob/3a33d53ea4aca312c5ad650b4883d9bac608a32e/keras/layers/wrappers.py#L34
+	2. Iterator(class Iterator) - https://github.com/keras-team/keras/blob/v2.6.0/keras/preprocessing/image.py#L318-L319
+	3. Composite(class Sequential) - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/sequential.py#L41-L467
