@@ -1,7 +1,7 @@
 # keras_softarch_assignment
 ### TO-DO list:
 
-1. (ยังไม่ได้ทำ)หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้
+1. (พลกำลังทำ)หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้
 	* [ ] วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา
 	* [ ] หาข้อเสียอย่างน้อย 1 จุดของ Architectural Stylesและนำเสนอวิธีการแก้ไขข้อเสียตรงนั้น
 	
@@ -21,7 +21,11 @@
 	* [ ] อธิบายผลลัพธ์จากการวิเคราะห์ Architectural Stylesของ keras และให้ดู UML diagram
 	* [ ] อธิบายผลลัพธ์จากการวิเคราะห์ design pattern ของ keras และให้ดู UML diagram หรือ code บางส่วน
 
-### Design pattern ที่หาเจอและน่าจะถูกต้อง:
+### 1. Architectural Styles ของ keras เป็นแบบ Layered
+	
+	
+	
+### 3. Design pattern ที่หาเจอและน่าจะถูกต้อง:
 	1. Decorator(class Wrappers) - https://github.com/keras-team/keras/blob/3a33d53ea4aca312c5ad650b4883d9bac608a32e/keras/layers/wrappers.py#L34
 	2. Iterator(class Iterator) - https://github.com/keras-team/keras/blob/v2.6.0/keras/preprocessing/image.py#L318-L319
 	3. Composite(class Sequential) - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/sequential.py#L41-L467
