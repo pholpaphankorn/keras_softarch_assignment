@@ -10,7 +10,7 @@
 	* [ ] หาและอธิบายว่าคนสร้าง kerasใช้วิธีการอะไรในการทำให้ตอบโจทย์ quality attributes ตัวนั้น
 	* [ ] หาหลักฐานมา support ข้อ 1 และ 2(อาจจะเป็น documentationหรือ source code โดยระบุ link และ บรรทัด code) 
 	
-3. (เจอแล้ว4ตัว)หา design pattern 4 ตัวโดยรายละเอียดมีดังนี้:
+3. (เจอแล้ว4ตัวแต่ยังไม่ได้ทำไร)หา design pattern 4 ตัวโดยรายละเอียดมีดังนี้:
 	* [ ] อธิบายว่าทำไมแต่ละตัวถึงถูกใช้ใน keras มันเหมาะสมกันยังไง
 	* [ ] ระบุ source file และบรรทัด code
 	* [ ] (optional-มีไม่มีก็ได้) documentation หรือ commend ของ developer
