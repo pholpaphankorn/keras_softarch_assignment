@@ -3,12 +3,12 @@
 
 1. (พลกำลังทำ)หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้
 	* [ ] วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา
-	* [ ] หาข้อเสียอย่างน้อย 1 จุดของ Architectural Stylesและนำเสนอวิธีการแก้ไขข้อเสียตรงนั้น
 	
 2. (ยังไม่ได้ทำ)หาและอธิบาย quality attributes ของ keras อย่างน้อย 3 ตัวโดยรายละเอียดมีดังนี้:
 	* [ ] ให้เหตุผลว่าทำไมคนสร้าง kerasถึงเลือกใช้ quality attributes ตัวนี้
 	* [ ] หาและอธิบายว่าคนสร้าง kerasใช้วิธีการอะไรในการทำให้ตอบโจทย์ quality attributes ตัวนั้น
 	* [ ] หาหลักฐานมา support ข้อ 1 และ 2(อาจจะเป็น documentationหรือ source code โดยระบุ link และ บรรทัด code) 
+	* [ ] หาข้อเสียที่เป็น quality attributes อย่างน้อย 1 จุด และนำเสนอวิธีการแก้ไขข้อเสียตรงนั้น 
 	
 3. (เจอแล้ว4ตัวแต่ยังไม่ได้ทำไร)หา design pattern 4 ตัวโดยรายละเอียดมีดังนี้:
 	* [ ] อธิบายว่าทำไมแต่ละตัวถึงถูกใช้ใน keras มันเหมาะสมกันยังไง
