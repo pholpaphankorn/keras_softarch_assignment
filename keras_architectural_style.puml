@@ -44,6 +44,6 @@ package "Keras Modules" {
     }
 }
 Layer <.right. Model: composed of
-Engine .down.> "Keras Modules"
+Engine .down.> "Keras Modules": use
 
 @enduml
