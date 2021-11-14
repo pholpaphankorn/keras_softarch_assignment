@@ -11,7 +11,7 @@
 	* [ ] หาหลักฐานมา support แต่ละข้อในข้อ 2(อาจจะเป็น documentationหรือ source code โดยระบุ link และ บรรทัด code) 
 	
 3. (เจอแล้ว4ตัวแต่ยังไม่ได้ทำไร)หา design pattern 4 ตัวโดยรายละเอียดมีดังนี้:
-	* [ ] อธิบายว่าทำไมแต่ละตัวถึงถูกใช้ใน keras มันเหมาะสมกันยังไง
+	* [ ] อธิบายว่าทำไมแต่ละตัวถึงถูกใช้ใน keras และเหมาะสมยังไง
 	* [ ] ระบุ source file และบรรทัด code
 	* [ ] (optional-มีไม่มีก็ได้) documentation หรือ commend ของ developer
 	* [ ] วาด class diagram สำหรับ design pattern แต่ละตัวที่หามา
