@@ -15,6 +15,9 @@
 	* [x] ระบุ source file และบรรทัด code
 	* [ ] (optional-มีไม่มีก็ได้) documentation หรือ commend ของ developer
 	* [ ] วาด class diagram สำหรับ design pattern แต่ละตัวที่หามา
+	```sh
+	- Patpum Hakaew วาด UML ของ Adapter Pattern 
+	```
 	
 4. นำเสนอ 15 นาทีเหมือนอาจารย์จะให้พูดทุกคนโดยมีรายละเอียดคร่าวๆดังนี้ - นำเสนอวันที่ 22 พ.ย. 64
 	* [ ] introduction ของ keras ว่าคืออะไรและใช้ทำอะไรคร่าวๆ
