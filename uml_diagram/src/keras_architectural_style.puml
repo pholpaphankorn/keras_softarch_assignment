@@ -1,0 +1,50 @@
+@startuml
+title Keras-Architectural Style
+package Engine{
+package Model{
+    package "Sequential Model" <<Folder>>{
+
+    }
+    package "Functional API" <<Folder>>{
+        
+    }
+}
+package Layer{
+    package "Dense Layer" <<Folder>>{
+
+    }
+    package "Recurrent Layer" <<Folder>>{
+
+    }
+    package "Convolution Layer" <<Folder>>{
+
+    } 
+    package "Dropout Layer" <<Folder>>{
+
+    } 
+    package "Pooling Layer" <<Folder>>{
+
+    } 
+}
+}
+package "Keras Modules" {
+    package Activations <<Folder>>{
+
+    }
+    package Losses <<Folder>>{
+
+    }
+    package Optimizers <<Folder>>{
+
+    }
+    package Regularizers <<Folder>>{
+
+    }
+    package Initializers <<Folder>>{
+
+    }
+}
+Layer <.right. Model: use
+Engine .down.> "Keras Modules": use
+
+@enduml

@@ -1,0 +1,99 @@
+@startuml
+
+title Keras-DataAdapter
+
++class tf.data.Dataset {
+}
++class keras.utils.DatasetCreator {
++ dataset_fn:Dataset
+}
+
++class client {
+    
+}
+
++abstract class DataAdapter {
+    +{static} can_handle(): bool
+    +{abstract} get_dataset(): Dataset
+    +{abstract} get_size(): int
+    +{abstract} batch_size(): int
+    +representative_batch_size(): int
+}
+
++class TensorLikeDataAdapter extends DataAdapter {
+    -_dataset:Dataset
+    +{static} can_handle(): bool
+    +get_dataset(): Dataset
+    +get_size(): int
+    +batch_size(): int
+    +representative_batch_size(): int
+}
+
+
+
++class CompositeTensorDataAdapter extends DataAdapter {
+   -_dataset:Dataset
+    +{static} can_handle(): bool
+    - is_tensor_or_composite(): bool
+    +should_recreate_iterator(): bool
+    +get_dataset(): Dataset
+    +get_size(): int
+    +batch_size(): int
+}
+
++class ListsOfScalarsDataAdapter extends DataAdapter {
+    -_internal_adapter: TensorLikeDataAdapter
+    +{static} can_handle(): bool
+    -is_list_of_scalars(): bool
+    +should_recreate_iterator(): bool
+    +get_dataset(): Dataset
+    +get_size(): int
+    +batch_size(): int
+}
+
++class DatasetAdapter extends DataAdapter {
+    -_dataset:Dataset
+    +{static} can_handle(): bool
+    +should_recreate_iterator(): bool
+    +get_dataset(): Dataset
+    +get_size(): int
+    +batch_size(): int
+}
+
++class GeneratorDataAdapter extends DataAdapter {
+    -_dataset:Dataset
+    +{static} can_handle(): bool
+    -_standardize_batch(): Dataset
+    +should_recreate_iterator(): bool
+    +get_dataset(): Dataset
+    +get_size(): int
+    +batch_size(): int
+}
+
++class DatasetCreatorAdapter extends DataAdapter {
+    +dataset_creator:DatasetCreator
+    +{static} can_handle(): bool
+    +should_recreate_iterator(): bool
+    +get_dataset(): Dataset
+    +get_size(): int
+    +batch_size(): int
+}
++class GenericArrayLikeDataAdapter extends TensorLikeDataAdapter {
+    +{static} can_handle(): bool
+    +slice_inputs(Dataset, List): Dataset 
+}
++class KerasSequenceAdapter extends GeneratorDataAdapter {
+    +{static} can_handle(): bool
+    should_recreate_iterator(): bool
+    +get_size(): int
+}
+
+client --> DataAdapter
+TensorLikeDataAdapter --> tf.data.Dataset
+CompositeTensorDataAdapter --> tf.data.Dataset
+GeneratorDataAdapter-->tf.data.Dataset
+ListsOfScalarsDataAdapter-->TensorLikeDataAdapter
+DatasetAdapter-->tf.data.Dataset
+DatasetCreatorAdapter-->keras.utils.DatasetCreator
+keras.utils.DatasetCreator-->tf.data.Dataset
+@enduml
