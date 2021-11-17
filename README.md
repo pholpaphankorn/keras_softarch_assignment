@@ -29,7 +29,7 @@
 	
 	
 ### 3. Design pattern ที่หาเจอและน่าจะถูกต้อง:
-	1. Decorator(class Wrappers) - https://github.com/keras-team/keras/blob/3a33d53ea4aca312c5ad650b4883d9bac608a32e/keras/layers/wrappers.py#L34
+	1. Decorator(class Wrappers) - https://github.com/keras-team/keras/blob/v2.6.0/keras/layers/wrappers.py
 	2. Iterator(class Iterator) - https://github.com/keras-team/keras/blob/v2.6.0/keras/preprocessing/image.py#L318-L319
 	3. Composite(class Sequential) - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/sequential.py#L41-L467
-	4. Adapter(class DataAdapter) - https://github.com/keras-team/keras/blob/3a33d53ea4aca312c5ad650b4883d9bac608a32e/keras/engine/data_adapter.py#L40
+	4. Adapter(class DataAdapter) - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/data_adapter.py
