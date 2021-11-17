@@ -14,8 +14,6 @@ class Layer {
 } 
 
 class Model extends Layer{
-    +__new__(cls, *args, **kwargs)
-    +__setattr__(name, value)
     +build(input_shape)
     +call(inputs, training, mask)
     +inputs
@@ -25,7 +23,7 @@ class Model extends Layer{
     -_steps_per_execution
 }
 
-class Dense_Layer extends Layer {
+class Dense extends Layer {
     +build(input_shape)
     +call(inputs)
     +units: int
@@ -33,7 +31,7 @@ class Dense_Layer extends Layer {
     +supports_masking
 }
 
-class RNN_Layer extends Layer {
+class RNN extends Layer {
     +build(input_shape)
     +call(inputs, mask, training, initial_state, constants)
     -_trackable_saved_model_saver()
@@ -43,7 +41,7 @@ class RNN_Layer extends Layer {
     -_states
 }
 
-class Conv_Layer extends Layer {
+class Conv extends Layer {
     -_validate_init()
     +build(input_shape)
     +call(inputs)
@@ -56,10 +54,7 @@ class Conv_Layer extends Layer {
 class Functional extends Model {
     +input()
     +output()
-    -_layer_checkpoint_dependencies()
-    +handle_deferred_layer_dependencies(layers)
     +call(inputs, training, mask)
-    -_validate_graph_inputs_and_outputs()
     -_insert_layers(layers, relevant_nodes)
     +skip_init: boolean
 }
@@ -70,14 +65,12 @@ class Sequential extends Functional {
     +build(input_shape)
     +add(layer)
     +call(inputs, training, mask)
-    +clear_previously_created_nodes(layer, created_nodes)
-    +track_nodes_created_by_last_call(layer, created_nodes)
     +supports_masking
     -_compute_output_and_mask_jointly
     -_input_dtype
 }
 
-
+Sequential .left.> Layer
 
 
 

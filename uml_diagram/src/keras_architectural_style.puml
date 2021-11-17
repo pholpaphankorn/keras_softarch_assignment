@@ -1,5 +1,5 @@
 @startuml
-title Keras-Architectural Style
+title Keras- Layered Architecture
 package Engine{
 package Model{
     package "Sequential Model" <<Folder>>{
