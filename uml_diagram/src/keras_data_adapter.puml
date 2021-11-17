@@ -1,6 +1,6 @@
 @startuml
 
-title Keras-DataAdapter
+title Keras - Adapter
 
 +class tf.data.Dataset {
 }
