@@ -2,7 +2,7 @@
 ### TO-DO list:
 
 1. (พลกำลังทำ)หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้
-	* [ ] วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา
+	* [x] วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา
 	
 2. (ยังไม่ได้ทำ)หาและอธิบาย quality attributes ของ keras อย่างน้อย 3 ตัวโดยรายละเอียดมีดังนี้:
 	* [ ] ให้เหตุผลว่าทำไมคนสร้าง kerasถึงเลือกใช้ quality attributes ตัวนี้
