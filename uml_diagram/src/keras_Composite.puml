@@ -3,71 +3,57 @@
 title Keras - Composite
 
 class Layer {
-    +build(input_shape)
-    +call(inputs, *args, **kwargs)
-    +compute_output_shape(input_shape)
-    -_set_training_mode(args, kwargs, call_context)
-    -supports_masking: boolean
-    -_trainable
-    -_stateful
-    +built
+    +build(input_shape:TensorShape):void
+    +call(inputs: list[Tensor], *args, **kwargs): Tensor
+    -_trainable: boolean
+    -_stateful: boolean
 } 
 
 class Model extends Layer{
-    +build(input_shape)
-    +call(inputs, training, mask)
-    +inputs
-    +outputs
-    +stop_training
-    -_training_state
-    -_steps_per_execution
+    +build(input_shape: TensorShape): void
+    +call(inputs: list[Tensor], training: boolean, mask:list[Tensor]): Tensor
+    +inputs:list[Tensor]
+    +outputs:list[Tensor]
 }
 
 class Dense extends Layer {
-    +build(input_shape)
-    +call(inputs)
+    +build(input_shape:list[int]): void
+    +call(inputs:list[Tensor])
     +units: int
-    +use_bias
-    +supports_masking
+    +use_bias: boolean
+    +supports_masking: boolean
 }
 
 class RNN extends Layer {
-    +build(input_shape)
-    +call(inputs, mask, training, initial_state, constants)
-    -_trackable_saved_model_saver()
-    +cell
-    +stateful
-    +unroll
-    -_states
+    +build(input_shape:list[int])
+    +call(inputs:list[Tensor], mask:list[Tensor], training:boolean, initial_state:Sequence, constants:list[Tensor])
+    +stateful: boolean
 }
 
-class Conv extends Layer {
-    -_validate_init()
-    +build(input_shape)
-    +call(inputs)
+abstract class Conv extends Layer {
+    +build(input_shape:list[int])
+    +call(inputs:list[Tensor])
     +filters: int
     +kernel_size: tuple[int]
-    +use_bias
+    +use_bias: boolean
     +data_format: String
 }
 
 class Functional extends Model {
-    +input()
-    +output()
-    +call(inputs, training, mask)
-    -_insert_layers(layers, relevant_nodes)
+    +input(): list[Tensor]
+    +output(): list[Tensor]
+    +call(inputs:list[Tensor], training: boolean, mask:list[Tensor])
     +skip_init: boolean
 }
 
 class Sequential extends Functional {
-    +layers()
-    +pop()
-    +build(input_shape)
-    +add(layer)
-    +call(inputs, training, mask)
-    +supports_masking
-    -_compute_output_and_mask_jointly
-    -_input_dtype
+    +add(layer: Layer): void
+    +pop(): void
+    +build(input_shape:list[int])
+    +call(inputs:list[Tensor], training: boolean, mask:list[Tensor])
+    +supports_masking: boolean
+    -_created_nodes: set
+
 }
 
 Sequential .left.> Layer
