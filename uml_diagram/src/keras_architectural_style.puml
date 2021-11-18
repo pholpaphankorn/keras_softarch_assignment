@@ -1,7 +1,7 @@
 @startuml
 title Keras- Layered Architecture
+package "Keras Cores"{
 package Engine{
-package Model{
     package "Sequential Model" <<Folder>>{
 
     }
@@ -9,17 +9,14 @@ package Model{
         
     }
 }
-package Layer{
-    package "Dense Layer" <<Folder>>{
+package Layers{
+    package "Core Layer" <<Folder>>{
 
     }
     package "Recurrent Layer" <<Folder>>{
 
     }
     package "Convolution Layer" <<Folder>>{
-
-    } 
-    package "Dropout Layer" <<Folder>>{
 
     } 
     package "Pooling Layer" <<Folder>>{
@@ -43,8 +40,12 @@ package "Keras Modules" {
     package Initializers <<Folder>>{
 
     }
+    package Metrics <<Folder>>{
+
+    }
 }
-Layer <.right. Model: use
-Engine .down.> "Keras Modules": use
+Layers <.right. Engine: use
+"Keras Cores" .down.> "Keras Modules": use
+"Sequential Model" .right.> "Functional API" :use
 
 @enduml

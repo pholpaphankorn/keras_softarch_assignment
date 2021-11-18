@@ -38,6 +38,15 @@ abstract class Conv extends Layer {
     +use_bias: boolean
     +data_format: String
 }
+class Conv1D extends Conv{
+    
+}
+class Conv2D extends Conv{
+
+}
+class Conv3D extends Conv{
+    
+}
 
 class Functional extends Model {
     +input(): list[Tensor]
@@ -57,7 +66,7 @@ class Sequential extends Functional {
 }
 
 Sequential .left.> Layer
-
+Functional .left.> Layer
 
 
 
