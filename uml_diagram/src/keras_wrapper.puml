@@ -31,7 +31,37 @@ title Wrapper - Class Diagram
     - get_shape_tuple(tuple,Tensor,...): tuple
     - remove_timesteps(): tuple
 }
+class Dense extends Layer {
+    +build(input_shape:list[int]): void
+    +call(inputs:list[Tensor])
+    +units: int
+    +use_bias: boolean
+    +supports_masking: boolean
+}
 
+class RNN extends Layer {
+    +build(input_shape:list[int])
+    +call(inputs:list[Tensor], mask:list[Tensor], training:boolean, initial_state:Sequence, constants:list[Tensor])
+    +stateful: boolean
+}
+
+abstract class Conv extends Layer {
+    +build(input_shape:list[int])
+    +call(inputs:list[Tensor])
+    +filters: int
+    +kernel_size: tuple[int]
+    +use_bias: boolean
+    +data_format: String
+}
+class Conv1D extends Conv{
+    
+}
+class Conv2D extends Conv{
+
+}
+class Conv3D extends Conv{
+    
+}
 +class Bidirectional extends Wrapper{
     + Bidirectional(Layer,String,dict,Layer)
     + backward_layer: Layer
