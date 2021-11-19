@@ -14,12 +14,12 @@ title Keras -Iterator
     +index_generator: Generator
 
     #set_index_array(): Void
-    -getitem(idx: Integer): NumpyArray
+    +getitem(idx: Integer): NumpyArray
     +on_epoch_end(): Void
     +reset(): Void
     #flow_index(): Generator
-    -iter(): Void
-    -next(): NumpyArray
+    +iter(): Void
+    +next(): NumpyArray
     #get_batches_of_transformed_samples(index_array: NumpyArray): NumpyArray
     
 }
