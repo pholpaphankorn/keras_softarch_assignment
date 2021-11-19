@@ -29,7 +29,9 @@ class RNN extends Layer {
     +call(inputs:list[Tensor], mask:list[Tensor], training:boolean, initial_state:Sequence, constants:list[Tensor])
     +stateful: boolean
 }
+class cilent{
 
+}
 abstract class Conv extends Layer {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor])
@@ -49,6 +51,7 @@ class Conv3D extends Conv{
 }
 
 class Functional extends Model {
+    #_self_tracked_trackables:list[Layer]
     +input(): list[Tensor]
     +output(): list[Tensor]
     +call(inputs:list[Tensor], training: boolean, mask:list[Tensor])
@@ -66,7 +69,8 @@ class Sequential extends Functional {
 }
 
 Sequential .left.> Layer : use
-Functional .left.> Layer : use
+Functional -left-> Layer
+cilent --> Layer
 
 
 

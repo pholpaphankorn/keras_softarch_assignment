@@ -1,6 +1,6 @@
 @startuml
 
-title Wrapper - Class Diagram
+title Keras - Decorator
     
 
 +abstract class Wrapper extends Layer{
@@ -13,17 +13,16 @@ title Wrapper - Class Diagram
     # trainable: boolean
     # name: String
     # dynamic: boolean
-    # losses: Hashmap<float>
+    # losses: list[Tensor]
     + Layer(boolean, String, dict, ...)
     +{static}from_config(dict): Layer
     + build(tuple): void
-    + call(Tensor|dict|tuple|list, ...): Tensor|tuple|list
+    + call(inputs:list[Tensor], *args, **kwargs): list[Tensor]
     + add_weight(String, tuple,...): Object
     + get_config(void): dict
     + compute_output_shape(tuple): tuple
     # get_cell_name():String
     + compute_mask(Tensor,Tensor): Tensor
-    # set_training_mode(tuple,dict,Object): -TO BE ADDED-
 }
 
 +class TimeDistributed extends Wrapper{
