@@ -1,0 +1,36 @@
+@startuml
+
+title Keras -Iterator
+
+
+interface Iterator {
+
+}
+
+class DirectoryIterator implements Iterator{
++__init__(directory: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...): Void
+
+}
+
+class NumpyArrayIterator implements Iterator{
++__init__(x: NumpyArray[], y: NumpyArray[], batch_size: Integer, shuffle: Boolean, seed: Integer,...): Void
+}
+
+class DataFrameIterator implements Iterator{
++__init__(dataframe: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...): Void
+}
+
+class ImageDataGenerator{
++__init__(rescale: Double, horizontal_flip: Boolean): Void
++flow(x: NumpyArray[], y: NumpyArray[], batch_size: Integer, shuffle: Boolean, seed: Integer,...):NumpyArrayIterator
++flow_from_directory(directory: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...):DirectoryIterator
++flow_from_dataframe(dataframe: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...):DataFrameIterator
+}
+
+
+ImageDataGenerator -up[dashed]-> DataFrameIterator
+ImageDataGenerator -up[dashed]-> NumpyArrayIterator
+ImageDataGenerator -up[dashed]-> DirectoryIterator
+
+
+@enduml
