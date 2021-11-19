@@ -2,11 +2,17 @@
 title Keras- Layered Architecture
 package "Keras Cores"{
 package Engine{
+    package Model {
     package "Sequential Model" <<Folder>>{
 
     }
     package "Functional API" <<Folder>>{
         
+    }
+    }
+
+    package "Base Layer" <<Folder>>{
+
     }
 }
 package Layers{
@@ -44,8 +50,12 @@ package "Keras Modules" {
 
     }
 }
-Layers <.right. Engine: use
-"Keras Cores" .down.> "Keras Modules": use
-"Sequential Model" .right.> "Functional API" :use
-
+"Base Layer" <.left. Model: <<import>>
+Layers .right.> "Base Layer" :<<import>>
+"Keras Cores" .down.> "Keras Modules": <<import>>
+"Sequential Model" .right.> "Functional API" :<<import>>
+"Pooling Layer" <.left. "Convolution Layer" :<<import>>
+Metrics .right.> Activations:<<import>>
+Metrics .right.> Losses:<<import>>
+Initializers <.left. Optimizers: <<import>>
 @enduml

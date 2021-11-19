@@ -65,8 +65,8 @@ class Sequential extends Functional {
 
 }
 
-Sequential .left.> Layer
-Functional .left.> Layer
+Sequential .left.> Layer : use
+Functional .left.> Layer : use
 
 
 
