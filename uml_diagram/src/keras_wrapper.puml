@@ -1,0 +1,44 @@
+@startuml
+
+title Wrapper - Class Diagram
+    
+
++abstract class Wrapper extends Layer{
+    - layer: Layer
+    + Wrapper(Layer, dict)
+    
+}
+
++class Layer{
+    - trainable: boolean
+    - name: String
+    - dynamic: boolean
+    - losses: Hashmap<float>
+    + Layer(boolean, String, dict, ...)
+    +{static}from_config(dict): Layer
+    + build(tuple): void
+    + call(Tensor|dict|tuple|list, ...): Tensor|tuple|list
+    + add_weight(String, tuple,...): Object
+    + get_config(void): dict
+    + compute_output_shape(tuple): tuple
+    - get_cell_name():String
+    + compute_mask(Tensor,Tensor): Tensor
+    - set_training_mode(tuple,dict,Object): -TO BE ADDED-
+}
+
++class TimeDistributed extends Wrapper{
+    + TimeDistributed(Layer,dict)
+    - get_shape_tuple(tuple,Tensor,...): tuple
+    - remove_timesteps(): tuple
+}
+
++class Bidirectional extends Wrapper{
+    + Bidirectional(Layer,String,dict,Layer)
+    + backward_layer: Layer
+    + forward_layer: Layer
+    + go_backwards: boolean
+    + merge_mode: String
+    - recreate_layer_from_config(Layer,boolean):Layer
+    + call(Tensor|dict|tuple|list, ...): Tensor|tuple|list
+}
+@enduml
