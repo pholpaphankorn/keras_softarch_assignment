@@ -55,7 +55,7 @@ Layers .right.> "Base Layer" :<<import>>
 "Keras Cores" .down.> "Keras Modules": <<import>>
 "Sequential Model" .right.> "Functional API" :<<import>>
 "Pooling Layer" <.left. "Convolution Layer" :<<import>>
-Metrics .right.> Activations:<<import>>
+ Activations <.left. Metrics:<<import>>
 Metrics .right.> Losses:<<import>>
 Initializers <.left. Optimizers: <<import>>
 @enduml
