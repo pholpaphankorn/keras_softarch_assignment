@@ -3,28 +3,133 @@
 title Keras -Iterator
 
 
-interface Iterator {
++class keras_preprocessing.image.Iterator {
+    +white_list_formats: Tuple
+    +n: Integer
+    +batch_size: Integer
+    +seed: Integer
+    +suffle: Boolean
+    +batch_index: Integer
+    +index_array: NumpyArray
+    +index_generator: Generator
+
+    +__init__(n: Integer, batch_size: Integer, seed: Integer, shuffle: Boolean)
+    #set_index_array(): Void
+    -getitem(idx: Integer): NumpyArray
+    +on_epoch_end(): Void
+    +reset(): Void
+    #flow_index(): Generator
+    -iter(): Void
+    -next(): NumpyArray
+    #get_batches_of_transformed_samples(index_array: NumpyArray): NumpyArray
+    
+}
+
++class keras_preprocessing.image.DataFrameIterator {
+    +allowed_class_modes: Set
+    +directory: String
+    +class_mode: String
+    +dtype: String
+    +class_indices: Dict
+    +classes: List
+    +filenames: List
+    #filepaths: List
+    +samples: Integer
+
+    +__init__(dataframe: PandasDataFrame,directory: String,image_data_generator: ImageDataGenerator,x_col: String,y_col: String,class_mode: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,interpolation: String,samples: Integer,seed: Integer)
+    +get_classes(): List
+    #filter_classes(): List
+    +filepaths(): List
+}
+
++class keras_preprocessing.image.DirectoryIterator {
+    +allowed_class_modes: Set
+    +directory: String
+    +classes: List
+    +class_mode: String
+    +dtype: String
+    +samples: Integer
+    +num_classes: Integer
+    +class_indices: Dict
+    +filenames: List
+    #filepaths: List
+    
+    +__init__(directory: String, image_data_generator: ImageDataGenerator,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,interpolation: String,samples: Integer,seed: Integer,suffle: Boolean,follow_links: Boolean,data_format: String,save_format: String,save_to_dir: String)
+    +filepaths(): List
+    +labels(): List
 
 }
 
-class DirectoryIterator implements Iterator{
-+__init__(directory: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...): Void
++class keras_preprocessing.image.NumpyArrayIterator {
+    +__init__(x: NumpyArray, y: NumpyArray, image_data_generator: ImageDataGenerator,batch_size: Tuple,shuffle: Boolean,seed: Integer,data_format: String,save_to_dir: String,save_prefix: String,save_format: String,subset: String,dtype: String)
+    +dtype: String
+    +x: NumpyArray
+    +x_misc: NumpyArray
+    +y: NumpyArray
+    +sample_weight: NumpyArray
+    +image_data_generator: ImageDataGenerator
+    +data_format: String
+    
+    #get_batches_of_transformed_samples(index_array: NumpyArray): NumpyArray
+}
+
++class keras_preprocessing.image.ImageDataGenerator {
+    +featurewise_center: Boolean
+    +samplewise_center: Boolean
+    +rotation_range: Integer
+    +width_shift_range: Float
+    +height_shift_range: Float
+    +shear_range: Float
+    +zoom_range: Float
+    +channel_shift_range: Float
+    +fill_mode: String
+    +cval: Float
+    +horizontal_flip: Boolean
+    +vertical_flip: Boolean
+    +rescale: Float
+    +preprocessing_function: Function
+    +data_format: String
+    +validation_split: Float
+    +dtype: String
+    +featurewise_std_normalization: Boolean
+    +samplewise_std_normalization: Boolean
+    +zca_whitening: Boolean
+    +zca_epsilon: Float
+    +random_crop: Boolean
+    +output_dim_ordering: String
+    +rescale: Float
+
+    +__init__(featurewise_center: Boolean,samplewise_center: Boolean,rotation_range: Integer,width_shift_range: Float,height_shift_range: Float,shear_range: Float,zoom_range: Float,channel_shift_range: Float,fill_mode: String,cval: Float,horizontal_flip: Boolean,vertical_flip: Boolean,rescale: Float,preprocessing_function: Function,data_format: String,validation_split: Float,dtype: String,featurewise_std_normalization: Boolean,samplewise_std_normalization: Boolean,zca_whitening: Boolean,zca_epsilon: Float,random_crop: Boolean,output_dim_ordering: String,rescale: Float)
+    +flow(x: NumpyArray, y: NumpyArray,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): NumpyArrayIterator
+    +flow_from_directory(directory: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DirectoryIterator
+    +flow_from_dataframe(dataframe: DataFrame,directory: String,x_col: String,y_col: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DataFrameIterator                 
+    +standardize(x: NumpyArray): NumpyArray
+    +get_random_transform(img_shape: Tuple,seed: Integer): NumpyArray
+    +apply_transform(x: NumpyArray,transform_parameters: Dict): NumpyArray
+    +random_transform(x: NumpyArray,seed: Integer): NumpyArray
+    +fit(x: NumpyArray,augment: Boolean,round: Integer,seed: Integer): Void
+}
+class Iterator extends keras_preprocessing.image.Iterator {
 
 }
 
-class NumpyArrayIterator implements Iterator{
-+__init__(x: NumpyArray[], y: NumpyArray[], batch_size: Integer, shuffle: Boolean, seed: Integer,...): Void
+class DirectoryIterator extends keras_preprocessing.image.DirectoryIterator, Iterator{
+    +__init__(directory: String, image_data_generator: ImageDataGenerator,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,interpolation: String,samples: Integer,seed: Integer,suffle: Boolean,follow_links: Boolean,data_format: String,save_format: String,save_to_dir: String)
 }
 
-class DataFrameIterator implements Iterator{
-+__init__(dataframe: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...): Void
+class NumpyArrayIterator extends keras_preprocessing.image.NumpyArrayIterator,Iterator{
+    +__init__(x: NumpyArray, y: NumpyArray, image_data_generator: ImageDataGenerator,batch_size: Tuple,shuffle: Boolean,seed: Integer,data_format: String,save_to_dir: String,save_prefix: String,save_format: String,subset: String,dtype: String)
 }
 
-class ImageDataGenerator{
-+__init__(rescale: Double, horizontal_flip: Boolean): Void
-+flow(x: NumpyArray[], y: NumpyArray[], batch_size: Integer, shuffle: Boolean, seed: Integer,...):NumpyArrayIterator
-+flow_from_directory(directory: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...):DirectoryIterator
-+flow_from_dataframe(dataframe: String, batch_size: Integer, shuffle: Boolean, seed: Integer,...):DataFrameIterator
+class DataFrameIterator extends keras_preprocessing.image.DataFrameIterator,Iterator{
+     +__init__(dataframe: PandasDataFrame,directory: String,image_data_generator: ImageDataGenerator,x_col: String,y_col: String,class_mode: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,interpolation: String,samples: Integer,seed: Integer)
+}
+
+class ImageDataGenerator extends keras_preprocessing.image.ImageDataGenerator{
+    +__init__(featurewise_center: Boolean,samplewise_center: Boolean,rotation_range: Integer,width_shift_range: Float,height_shift_range: Float,shear_range: Float,zoom_range: Float,channel_shift_range: Float,fill_mode: String,cval: Float,horizontal_flip: Boolean,vertical_flip: Boolean,rescale: Float,preprocessing_function: Function,data_format: String,validation_split: Float,dtype: String,featurewise_std_normalization: Boolean,samplewise_std_normalization: Boolean,zca_whitening: Boolean,zca_epsilon: Float,random_crop: Boolean,output_dim_ordering: String,rescale: Float)
+    +flow(x: NumpyArray, y: NumpyArray,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): NumpyArrayIterator
+    +flow_from_directory(directory: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DirectoryIterator
+    +flow_from_dataframe(dataframe: DataFrame,directory: String,x_col: String,y_col: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DataFrameIterator
 }
 
 
