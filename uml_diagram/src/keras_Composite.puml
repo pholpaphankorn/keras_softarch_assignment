@@ -51,6 +51,7 @@ class Conv3D extends Conv{
 }
 
 class Functional extends Model {
+    #_self_tracked_trackables:list[Layer]
     +input(): list[Tensor]
     +output(): list[Tensor]
     +call(inputs:list[Tensor], training: boolean, mask:list[Tensor])
@@ -68,7 +69,7 @@ class Sequential extends Functional {
 }
 
 Sequential .left.> Layer : use
-Functional .left.> Layer : use
+Functional -left-> Layer
 cilent --> Layer
 
 

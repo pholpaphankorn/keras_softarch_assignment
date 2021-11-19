@@ -1,6 +1,6 @@
 @startuml
 
-title Wrapper - Class Diagram
+title Keras - Decorator
     
 
 +abstract class Wrapper extends Layer{
