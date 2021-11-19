@@ -5,8 +5,8 @@ title Keras - Composite
 class Layer {
     +build(input_shape:TensorShape):void
     +call(inputs: list[Tensor], *args, **kwargs): Tensor
-    -_trainable: boolean
-    -_stateful: boolean
+    #_trainable: boolean
+    #_stateful: boolean
 } 
 
 class Model extends Layer{
@@ -63,7 +63,7 @@ class Sequential extends Functional {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor], training: boolean, mask:list[Tensor])
     +supports_masking: boolean
-    -_created_nodes: set
+    #_created_nodes: set
 
 }
 
