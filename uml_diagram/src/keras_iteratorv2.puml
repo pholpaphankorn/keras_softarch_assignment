@@ -113,6 +113,8 @@ class DirectoryIterator extends keras_preprocessing.image.DirectoryIterator, Ite
 }
 
 class NumpyArrayIterator extends keras_preprocessing.image.NumpyArrayIterator,Iterator{
+       
+}
   
 
 class DataFrameIterator extends keras_preprocessing.image.DataFrameIterator,Iterator{
