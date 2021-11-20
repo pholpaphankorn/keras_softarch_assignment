@@ -25,7 +25,7 @@ title Keras - Iterator
     +flow_from_dataframe(): Iterator
 }
 
-+class cilent{
++class client{
 
 }
 
@@ -33,5 +33,5 @@ ImageDataGenerator -up[dashed]-> DataFrameIterator
 ImageDataGenerator -up[dashed]-> NumpyArrayIterator
 ImageDataGenerator -up[dashed]-> DirectoryIterator
 
-cilent -left-> Iterator
+client -left-> Iterator
 @enduml
