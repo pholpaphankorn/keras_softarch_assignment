@@ -24,7 +24,6 @@ title Keras - Decorator
 }
 +class Dense {
     +build(): void
-    +call()
     +units: int
     +use_bias: boolean
     +supports_masking: boolean
@@ -33,13 +32,11 @@ title Keras - Decorator
 
 +class RNN extends Layer {
     +build(): void
-    +call()
     +stateful: boolean
 }
 
 +abstract class Conv {
     +build(): void
-    +call()
     +filters: int
     +kernel_size: tuple[int]
     +use_bias: boolean
@@ -60,7 +57,7 @@ title Keras - Decorator
     + go_backwards: boolean
     ...
     # recreate_layer_from_config():Layer
-    + call(): Tensor|tuple|list
+    + call(): Tensor
 }
 +class cilent{
 
