@@ -122,9 +122,9 @@ title Keras - Iterator
 }
 
 +class ImageDataGenerator extends keras_preprocessing.image.ImageDataGenerator{
-    +flow(x: NumpyArray, y: NumpyArray,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): NumpyArrayIterator
-    +flow_from_directory(directory: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DirectoryIterator
-    +flow_from_dataframe(dataframe: DataFrame,directory: String,x_col: String,y_col: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DataFrameIterator
+    +flow(x: NumpyArray, y: NumpyArray,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): Iterator
+    +flow_from_directory(directory: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): Iterator
+    +flow_from_dataframe(dataframe: DataFrame,directory: String,x_col: String,y_col: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): Iterator
 }
 
 +class cilent{
