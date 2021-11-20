@@ -135,5 +135,5 @@ ImageDataGenerator -up[dashed]-> DataFrameIterator
 ImageDataGenerator -up[dashed]-> NumpyArrayIterator
 ImageDataGenerator -up[dashed]-> DirectoryIterator
 
-cilent -up-> ImageDataGenerator
+cilent -left-> Iterator
 @enduml
