@@ -1,0 +1,74 @@
+@startuml
+
+title Keras - Decorator
+    
+
++abstract class Wrapper{
+    # layer: Layer
+    
+}
+
++class Layer{
+    # trainable: boolean
+    # name: String
+    # dynamic: boolean
+    ...
+    +build():void
+    + call(): Tensor
+    + compute_output_shape(): tuple
+}
+
++class TimeDistributed {
+    # get_shape_tuple(): tuple
+    # remove_timesteps(): tuple
+}
++class Dense {
+    +build(): void
+    +call()
+    +units: int
+    +use_bias: boolean
+    +supports_masking: boolean
+    ...
+}
+
++class RNN extends Layer {
+    +build(): void
+    +call()
+    +stateful: boolean
+}
+
++abstract class Conv {
+    +build(): void
+    +call()
+    +filters: int
+    +kernel_size: tuple[int]
+    +use_bias: boolean
+    ...
+}
++class Conv1D extends Conv{
+    
+}
++class Conv2D extends Conv{
+
+}
++class Conv3D extends Conv{
+    
+}
++class Bidirectional extends Wrapper{
+    + backward_layer: Layer
+    + forward_layer: Layer
+    + go_backwards: boolean
+    ...
+    # recreate_layer_from_config():Layer
+    + call(): Tensor|tuple|list
+}
++class cilent{
+
+}
+cilent -down-> Layer
+Wrapper -right-> Layer
+Wrapper -right-|> Layer
+Conv -up-|> Layer
+Dense -left-|> Layer
+TimeDistributed -right-|> Wrapper
+@enduml

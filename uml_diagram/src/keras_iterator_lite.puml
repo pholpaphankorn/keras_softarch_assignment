@@ -3,23 +3,47 @@
 title Keras - Iterator
 
 +class Iterator  {
-
+    +batch_size: int
+    +seed: Integer
+    +shuffle: Boolean
+    ...
+    +iter(): Void
+    +next(): NumpyArray
+    #flow_index(): Generator
+    
 }
 
 +class DirectoryIterator extends Iterator {
-   
+    +allowed_class_modes: Set
+    +directory: String
+    +classes: List
+    ...
+    +filepaths(): List
+    +labels(): List
 }
 
 +class NumpyArrayIterator extends Iterator {
-       
+    +x: NumpyArray
+    +y: NumpyArray
+    ...
 }
   
 
 +class DataFrameIterator extends Iterator {
-     
+    +allowed_class_modes: Set
+    +directory: String
+    +classes: List
+    ...
+    +get_classes(): List
+    #filter_classes(): List
+    +filepaths(): List
 }
 
 +class ImageDataGenerator {
+    +horizontal_flip: Boolean
+    +vertical_flip: Boolean
+    +rescale: Float
+    ...
     +flow(): Iterator
     +flow_from_directory(): Iterator
     +flow_from_dataframe(): Iterator
