@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="599px" preserveAspectRatio="none" style="width:1510px;height:599px;background:#FFFFFF;" version="1.1" viewBox="0 0 1510 599" width="1510px" zoomAndPan="magnify"><defs><filter height="300%" id="f1rnf2dh1af7s0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="228" x="634.5" y="18.6855">Keras - Layered Architecture</text><!--MD5=[88c4fc0e888fc76bb4ec43a102580c2e]
+cluster Keras Cores--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="16,70.9971,109,70.9971,116,94.6064,1493,94.6064,1493,382.9971,16,382.9971,16,70.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="116" y1="94.6064" y2="94.6064"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="87" x="20" y="87.5303">Keras Cores</text><!--MD5=[1354d4287b836671d015041ce990275d]
+cluster Engine--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="817,122.9971,872,122.9971,879,146.6064,1461,146.6064,1461,350.9971,817,350.9971,817,122.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="817" x2="879" y1="146.6064" y2="146.6064"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="49" x="821" y="139.5303">Engine</text><!--MD5=[15636c1ca4a123c16a2a1a8e90aca7a9]
+cluster Model--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="1014,174.9971,1064,174.9971,1071,198.6064,1429,198.6064,1429,318.9971,1014,318.9971,1014,174.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1014" x2="1071" y1="198.6064" y2="198.6064"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="44" x="1018" y="191.5303">Model</text><!--MD5=[6111557239d0aa7328e70dfef9f9ebfc]
+cluster Layers--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="64,174.9971,116,174.9971,123,198.6064,785,198.6064,785,318.9971,64,318.9971,64,174.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="64" x2="123" y1="198.6064" y2="198.6064"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="46" x="68" y="191.5303">Layers</text><!--MD5=[21f150bf99fc754a6e86a00feb772ea0]
+cluster Keras Modules--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="16,448.9971,128,448.9971,135,472.6064,958,472.6064,958,592.9971,16,592.9971,16,448.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="135" y1="472.6064" y2="472.6064"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="106" x="20" y="465.5303">Keras Modules</text><!--MD5=[821b3cc0d561c4d9ff810c304ac8f761]
+entity Sequential Model--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="1057.5,238.9971,1103.5,238.9971,1110.5,259.9971,1196.5,259.9971,1196.5,294.6064,1057.5,294.6064,1057.5,238.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1057.5" x2="1110.5" y1="259.9971" y2="259.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="1067.5" y="281.5303">Sequential Model</text><!--MD5=[766bec854ea12a1def9109c4df4657d7]
+entity Functional API--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="1283.5,238.9971,1329.5,238.9971,1336.5,259.9971,1404.5,259.9971,1404.5,294.6064,1283.5,294.6064,1283.5,238.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1283.5" x2="1336.5" y1="259.9971" y2="259.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="1293.5" y="281.5303">Functional API</text><!--MD5=[353b07cba8e638275933cce9a0cffe85]
+entity Base Layer--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="833,238.9971,879,238.9971,886,259.9971,935,259.9971,935,294.6064,833,294.6064,833,238.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="833" x2="886" y1="259.9971" y2="259.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="843" y="281.5303">Base Layer</text><!--MD5=[bbd3928d0dc7beb98b3cd92b13e7da4f]
+entity Core Layer--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="275.5,238.9971,321.5,238.9971,328.5,259.9971,376.5,259.9971,376.5,294.6064,275.5,294.6064,275.5,238.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="275.5" x2="328.5" y1="259.9971" y2="259.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="285.5" y="281.5303">Core Layer</text><!--MD5=[fcf9b6b0cdc0c0097d5adff3d04b558a]
+entity Recurrent Layer--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="107.5,238.9971,153.5,238.9971,160.5,259.9971,240.5,259.9971,240.5,294.6064,107.5,294.6064,107.5,238.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="107.5" x2="160.5" y1="259.9971" y2="259.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="117.5" y="281.5303">Recurrent Layer</text><!--MD5=[8a02f87645caa968c32ef6c4b0184162]
+entity Convolution Layer--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="615.5,238.9971,661.5,238.9971,668.5,259.9971,760.5,259.9971,760.5,294.6064,615.5,294.6064,615.5,238.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="615.5" x2="668.5" y1="259.9971" y2="259.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="625.5" y="281.5303">Convolution Layer</text><!--MD5=[311a027098feeeefbb75dfeb1246da9a]
+entity Pooling Layer--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="411.5,238.9971,457.5,238.9971,464.5,259.9971,528.5,259.9971,528.5,294.6064,411.5,294.6064,411.5,238.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="411.5" x2="464.5" y1="259.9971" y2="259.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="421.5" y="281.5303">Pooling Layer</text><!--MD5=[0a88391f5ab554cf60523d5201ce8b0c]
+entity Activations--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="512,512.9971,558,512.9971,565,533.9971,610,533.9971,610,568.6064,512,568.6064,512,512.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="512" x2="565" y1="533.9971" y2="533.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="522" y="555.5303">Activations</text><!--MD5=[1a9764931f3a98a36fa623d3d847cb40]
+entity Losses--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="858.5,512.9971,904.5,512.9971,911.5,533.9971,933.5,533.9971,933.5,568.6064,858.5,568.6064,858.5,512.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="858.5" x2="911.5" y1="533.9971" y2="533.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="868.5" y="555.5303">Losses</text><!--MD5=[bdced9a335b899c71c7442561734a6da]
+entity Optimizers--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="381,512.9971,427,512.9971,434,533.9971,477,533.9971,477,568.6064,381,568.6064,381,512.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="381" x2="434" y1="533.9971" y2="533.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="391" y="555.5303">Optimizers</text><!--MD5=[949e30d16a3801580dc5feae7419ec6c]
+entity Regularizers--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="59.5,512.9971,105.5,512.9971,112.5,533.9971,168.5,533.9971,168.5,568.6064,59.5,568.6064,59.5,512.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="59.5" x2="112.5" y1="533.9971" y2="533.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="69.5" y="555.5303">Regularizers</text><!--MD5=[62359f790e4d432a2f284fd6c7e2be18]
+entity Initializers--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="203.5,512.9971,249.5,512.9971,256.5,533.9971,294.5,533.9971,294.5,568.6064,203.5,568.6064,203.5,512.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="203.5" x2="256.5" y1="533.9971" y2="533.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="213.5" y="555.5303">Initializers</text><!--MD5=[b5f71b4c79b11f7daaaeb2db7a18ec47]
+entity Metrics--><polygon fill="#FFFFFF" filter="url(#f1rnf2dh1af7s0)" points="696.5,512.9971,742.5,512.9971,749.5,533.9971,771.5,533.9971,771.5,568.6064,696.5,568.6064,696.5,512.9971" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="696.5" x2="749.5" y1="533.9971" y2="533.9971"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="706.5" y="555.5303">Metrics</text><!--MD5=[eee10a8b929aee74bddef482681b83c2]
+reverse link Base Layer to Model--><path d="M940.6,266.9971 C958.4,266.9971 977.34,266.9971 992.4675,266.9971 C1000.0313,266.9971 1006.6419,266.9971 1011.6803,266.9971 C1012.3101,266.9971 1012.9154,266.9971 1013.4948,266.9971 C1013.6397,266.9971 1013.7829,266.9971 1013.9246,266.9971 " fill="none" id="Base Layer-backto-Model" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="935.39,266.9971,944.39,270.9971,940.39,266.9971,944.39,262.9971,935.39,266.9971" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="953.32" y="260.4922">«import»</text><!--MD5=[2e3c3c7ecf91a2b59832f2c858365b01]
+link Layers to Base Layer--><path d="M70.1182,174.9957 C70.1291,174.666 70.1403,174.3363 70.1517,174.0065 C70.1746,173.347 70.1985,172.6873 70.2234,172.0275 C70.323,169.3885 70.4391,166.7489 70.5733,164.1166 C70.8417,158.8522 71.1822,153.6173 71.6071,148.4765 C72.4569,138.1949 73.6441,128.2893 75.2663,119.2746 C78.5106,101.2452 83.495,86.7796 91,79.9971 C147.56,28.8971 711.06,41.7571 777,79.9971 C834.17,113.1571 863.4,189.6271 876.02,233.8171 " fill="none" id="Layers-to-Base Layer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="877.4,238.7871,878.8348,229.0433,876.0566,233.9709,871.129,231.1927,877.4,238.7871" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="427" y="43.4922">«import»</text><!--MD5=[a475783d93f61f5e4f01eead3c370f55]
+link Keras Cores to Keras Modules--><path d="M24,383.68 C24,384.1978 24,384.7159 24,385.2344 C24,387.3086 24,389.3886 24,391.4726 C24,395.6406 24,399.8245 24,404.0083 C24,412.376 24,420.7436 24,428.9844 C24,433.1048 24,437.1935 24,441.2347 C24,443.2553 24,445.2641 24,447.2589 C24,447.7576 24,448.2555 24,448.7524 " fill="none" id="Keras Cores-to-Keras Modules" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="24,448.7524,28,439.7524,24,443.7524,20,439.7524,24,448.7524" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="25" y="421.4922">«import»</text><!--MD5=[266cec540af35ca71e5e6cafdb52b610]
+link Sequential Model to Functional API--><path d="M1196.56,266.9971 C1222.71,266.9971 1252.33,266.9971 1278.14,266.9971 " fill="none" id="Sequential Model-to-Functional API" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1283.25,266.9971,1274.25,262.9971,1278.25,266.9971,1274.25,270.9971,1283.25,266.9971" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="1215" y="260.4922">«import»</text><!--MD5=[5569be5744161d2155e57de34df325cf]
+reverse link Pooling Layer to Convolution Layer--><path d="M533.75,266.9971 C559.27,266.9971 588.8,266.9971 615.16,266.9971 " fill="none" id="Pooling Layer-backto-Convolution Layer" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="528.71,266.9971,537.71,270.9971,533.71,266.9971,537.71,262.9971,528.71,266.9971" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="547" y="260.4922">«import»</text><!--MD5=[094c2742fd5619acfac840c3672cdf53]
+reverse link Activations to Metrics--><path d="M615.31,540.9971 C641.65,540.9971 672.62,540.9971 696.32,540.9971 " fill="none" id="Activations-backto-Metrics" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="610.11,540.9971,619.11,544.9971,615.11,540.9971,619.11,536.9971,610.11,540.9971" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="628.25" y="534.4922">«import»</text><!--MD5=[8d4fa1eff4e44ed320c916c235e918c8]
+link Metrics to Losses--><path d="M771.57,540.9971 C795.92,540.9971 827.7,540.9971 853.04,540.9971 " fill="none" id="Metrics-to-Losses" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="858.35,540.9971,849.35,536.9971,853.35,540.9971,849.35,544.9971,858.35,540.9971" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="790" y="534.4922">«import»</text><!--MD5=[2b7d7fc6c57d88c5c4b0aab96f04de4b]
+reverse link Initializers to Optimizers--><path d="M299.9,540.9971 C325.35,540.9971 355.96,540.9971 381,540.9971 " fill="none" id="Initializers-backto-Optimizers" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="294.89,540.9971,303.89,544.9971,299.89,540.9971,303.89,536.9971,294.89,540.9971" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="312.75" y="534.4922">«import»</text><!--MD5=[649c6d0093995fa1cde6b167f42411ee]
+@startuml
+title Keras - Layered Architecture
+package "Keras Cores"{
+package Engine{
+    package Model {
+    package "Sequential Model" <<Folder>>{
+
+    }
+    package "Functional API" <<Folder>>{
+        
+    }
+    }
+
+    package "Base Layer" <<Folder>>{
+
+    }
+}
+package Layers{
+    package "Core Layer" <<Folder>>{
+
+    }
+    package "Recurrent Layer" <<Folder>>{
+
+    }
+    package "Convolution Layer" <<Folder>>{
+
+    } 
+    package "Pooling Layer" <<Folder>>{
+
+    } 
+}
+}
+package "Keras Modules" {
+    package Activations <<Folder>>{
+
+    }
+    package Losses <<Folder>>{
+
+    }
+    package Optimizers <<Folder>>{
+
+    }
+    package Regularizers <<Folder>>{
+
+    }
+    package Initializers <<Folder>>{
+
+    }
+    package Metrics <<Folder>>{
+
+    }
+}
+"Base Layer" <.left. Model: <<import>>
+Layers .right.> "Base Layer" :<<import>>
+"Keras Cores" .down.> "Keras Modules": <<import>>
+"Sequential Model" .right.> "Functional API" :<<import>>
+"Pooling Layer" <.left. "Convolution Layer" :<<import>>
+ Activations <.left. Metrics:<<import>>
+Metrics .right.> Losses:<<import>>
+Initializers <.left. Optimizers: <<import>>
+@enduml
+
+PlantUML version 1.2021.14(Fri Nov 12 23:46:50 ICT 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

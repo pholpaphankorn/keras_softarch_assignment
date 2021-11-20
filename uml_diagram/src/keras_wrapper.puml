@@ -5,7 +5,6 @@ title Keras - Decorator
 
 +abstract class Wrapper extends Layer{
     # layer: Layer
-    + Wrapper(Layer, dict)
     
 }
 
@@ -14,23 +13,18 @@ title Keras - Decorator
     # name: String
     # dynamic: boolean
     # losses: list[Tensor]
-    + Layer(boolean, String, dict, ...)
-    +{static}from_config(dict): Layer
-    + build(tuple): void
-    + call(inputs:list[Tensor], *args, **kwargs): list[Tensor]
-    + add_weight(String, tuple,...): Object
-    + get_config(void): dict
-    + compute_output_shape(tuple): tuple
-    # get_cell_name():String
-    + compute_mask(Tensor,Tensor): Tensor
+    +build(input_shape:TensorShape):void
+    + call(inputs:list[Tensor], *args, **kwargs): Tensor
+    + compute_output_shape(input_shape:tuple): tuple
+    + compute_mask(inputs:Tensor,mask:Tensor): Tensor
 }
 
 +class TimeDistributed extends Wrapper{
-    + TimeDistributed(Layer,dict)
-    # get_shape_tuple(tuple,Tensor,...): tuple
-    # remove_timesteps(): tuple
+
+    # get_shape_tuple(init_tuple:tuple[],tensor:Tensor,start_idx:int,int_shape:TensorShape): tuple
+    # remove_timesteps(dims:tuple[int]): tuple
 }
-class Dense extends Layer {
++class Dense extends Layer {
     +build(input_shape:list[int]): void
     +call(inputs:list[Tensor])
     +units: int
@@ -38,13 +32,13 @@ class Dense extends Layer {
     +supports_masking: boolean
 }
 
-class RNN extends Layer {
++class RNN extends Layer {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor], mask:list[Tensor], training:boolean, initial_state:Sequence, constants:list[Tensor])
     +stateful: boolean
 }
 
-abstract class Conv extends Layer {
++abstract class Conv extends Layer {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor])
     +filters: int
@@ -52,22 +46,26 @@ abstract class Conv extends Layer {
     +use_bias: boolean
     +data_format: String
 }
-class Conv1D extends Conv{
++class Conv1D extends Conv{
     
 }
-class Conv2D extends Conv{
++class Conv2D extends Conv{
 
 }
-class Conv3D extends Conv{
++class Conv3D extends Conv{
     
 }
 +class Bidirectional extends Wrapper{
-    + Bidirectional(Layer,String,dict,Layer)
     + backward_layer: Layer
     + forward_layer: Layer
     + go_backwards: boolean
     + merge_mode: String
-    # recreate_layer_from_config(Layer,boolean):Layer
-    + call(Tensor|dict|tuple|list, ...): Tensor|tuple|list
+    # recreate_layer_from_config(layer:Layer,go_backwards:boolean):Layer
+    + call(inputs:list[Tensor],training:boolean,mask:list[Tensor],initial_state:Sequence, constants:list[Tensor]): Tensor|tuple|list
 }
++class cilent{
+
+}
+cilent -down-> Layer
+Layer <-left- Wrapper
 @enduml

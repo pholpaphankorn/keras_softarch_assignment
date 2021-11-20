@@ -1,6 +1,6 @@
 @startuml
 
-title Keras -Iterator
+title Keras - Iterator
 
 
 +class keras_preprocessing.image.Iterator {

@@ -1,6 +1,6 @@
 @startuml
 
-title Keras -Iterator
+title Keras - Iterator
 
 
 +class keras_preprocessing.image.Iterator {
@@ -104,33 +104,36 @@ title Keras -Iterator
     +random_transform(x: NumpyArray,seed: Integer): NumpyArray
     +fit(x: NumpyArray,augment: Boolean,round: Integer,seed: Integer): Void
 }
-class Iterator extends keras_preprocessing.image.Iterator {
++class Iterator extends keras_preprocessing.image.Iterator {
 
 }
 
-class DirectoryIterator extends keras_preprocessing.image.DirectoryIterator, Iterator{
++class DirectoryIterator extends keras_preprocessing.image.DirectoryIterator, Iterator{
    
 }
 
-class NumpyArrayIterator extends keras_preprocessing.image.NumpyArrayIterator,Iterator{
++class NumpyArrayIterator extends keras_preprocessing.image.NumpyArrayIterator,Iterator{
        
 }
   
 
-class DataFrameIterator extends keras_preprocessing.image.DataFrameIterator,Iterator{
++class DataFrameIterator extends keras_preprocessing.image.DataFrameIterator,Iterator{
      
 }
 
-class ImageDataGenerator extends keras_preprocessing.image.ImageDataGenerator{
++class ImageDataGenerator extends keras_preprocessing.image.ImageDataGenerator{
     +flow(x: NumpyArray, y: NumpyArray,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): NumpyArrayIterator
     +flow_from_directory(directory: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DirectoryIterator
     +flow_from_dataframe(dataframe: DataFrame,directory: String,x_col: String,y_col: String,target_size: Tuple,color_mode: String,classes: List,class_mode: String,batch_size: Integer,shuffle: Boolean,seed: Integer,save_to_dir: String,save_prefix: String,save_format: String,subset: String): DataFrameIterator
 }
 
++class cilent{
+
+}
 
 ImageDataGenerator -up[dashed]-> DataFrameIterator
 ImageDataGenerator -up[dashed]-> NumpyArrayIterator
 ImageDataGenerator -up[dashed]-> DirectoryIterator
 
-
+cilent -up-> ImageDataGenerator
 @enduml

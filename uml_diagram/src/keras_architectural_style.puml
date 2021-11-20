@@ -1,5 +1,5 @@
 @startuml
-title Keras- Layered Architecture
+title Keras - Layered Architecture
 package "Keras Cores"{
 package Engine{
     package Model {

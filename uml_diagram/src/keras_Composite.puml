@@ -2,21 +2,21 @@
 
 title Keras - Composite
 
-class Layer {
++class Layer {
     +build(input_shape:TensorShape):void
     +call(inputs: list[Tensor], *args, **kwargs): Tensor
     #_trainable: boolean
     #_stateful: boolean
 } 
 
-class Model extends Layer{
++class Model extends Layer{
     +build(input_shape: TensorShape): void
     +call(inputs: list[Tensor], training: boolean, mask:list[Tensor]): Tensor
     +inputs:list[Tensor]
     +outputs:list[Tensor]
 }
 
-class Dense extends Layer {
++class Dense extends Layer {
     +build(input_shape:list[int]): void
     +call(inputs:list[Tensor])
     +units: int
@@ -24,15 +24,15 @@ class Dense extends Layer {
     +supports_masking: boolean
 }
 
-class RNN extends Layer {
++class RNN extends Layer {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor], mask:list[Tensor], training:boolean, initial_state:Sequence, constants:list[Tensor])
     +stateful: boolean
 }
-class cilent{
++class cilent{
 
 }
-abstract class Conv extends Layer {
++abstract class Conv extends Layer {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor])
     +filters: int
@@ -40,17 +40,17 @@ abstract class Conv extends Layer {
     +use_bias: boolean
     +data_format: String
 }
-class Conv1D extends Conv{
++class Conv1D extends Conv{
     
 }
-class Conv2D extends Conv{
++class Conv2D extends Conv{
 
 }
-class Conv3D extends Conv{
++class Conv3D extends Conv{
     
 }
 
-class Functional extends Model {
++class Functional extends Model {
     #_self_tracked_trackables:list[Layer]
     +input(): list[Tensor]
     +output(): list[Tensor]
@@ -58,7 +58,7 @@ class Functional extends Model {
     +skip_init: boolean
 }
 
-class Sequential extends Functional {
++class Sequential extends Functional {
     +add(layer: Layer): void
     +pop(): void
     +build(input_shape:list[int])
