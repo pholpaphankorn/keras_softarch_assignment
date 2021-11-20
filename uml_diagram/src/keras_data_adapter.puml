@@ -84,7 +84,7 @@ title Keras - Adapter
 }
 +class KerasSequenceAdapter extends GeneratorDataAdapter {
     +{static} can_handle(): bool
-    should_recreate_iterator(): bool
+    +should_recreate_iterator(): bool
     +get_size(): int
 }
 

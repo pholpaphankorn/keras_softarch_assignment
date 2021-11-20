@@ -4,14 +4,14 @@ title Keras - Composite
 
 +class Layer {
     +build(input_shape:TensorShape):void
-    +call(inputs: list[Tensor], *args, **kwargs): Tensor
+    +call(inputs: list[Tensor],...): Tensor
     #_trainable: boolean
     #_stateful: boolean
 } 
 
 +class Model extends Layer{
     +build(input_shape: TensorShape): void
-    +call(inputs: list[Tensor], training: boolean, mask:list[Tensor]): Tensor
+    +call(inputs: list[Tensor], ...): Tensor
     +inputs:list[Tensor]
     +outputs:list[Tensor]
 }
@@ -26,7 +26,7 @@ title Keras - Composite
 
 +class RNN extends Layer {
     +build(input_shape:list[int])
-    +call(inputs:list[Tensor], mask:list[Tensor], training:boolean, initial_state:Sequence, constants:list[Tensor])
+    +call(inputs:list[Tensor], ...)
     +stateful: boolean
 }
 +class client{
@@ -54,7 +54,7 @@ title Keras - Composite
     #_self_tracked_trackables:list[Layer]
     +input(): list[Tensor]
     +output(): list[Tensor]
-    +call(inputs:list[Tensor], training: boolean, mask:list[Tensor])
+    +call(inputs:list[Tensor],...)
     +skip_init: boolean
 }
 
@@ -62,7 +62,7 @@ title Keras - Composite
     +add(layer: Layer): void
     +pop(): void
     +build(input_shape:list[int])
-    +call(inputs:list[Tensor], training: boolean, mask:list[Tensor])
+    +call(inputs:list[Tensor],...)
     +supports_masking: boolean
     #_created_nodes: set
 
