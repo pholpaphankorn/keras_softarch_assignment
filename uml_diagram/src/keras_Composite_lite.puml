@@ -9,7 +9,7 @@ title Keras - Composite
     #_stateful: boolean
 } 
 
-+class Model extends Layer{
++class Model {
     +build(input_shape: TensorShape): void
     +call(inputs: list[Tensor], ...): Tensor
     +inputs:list[Tensor]
@@ -24,7 +24,7 @@ title Keras - Composite
     +supports_masking: boolean
 }
 
-+class RNN extends Layer {
++class RNN {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor], ...)
     +stateful: boolean
@@ -32,7 +32,7 @@ title Keras - Composite
 +class client{
 
 }
-+abstract class Conv extends Layer {
++abstract class Conv {
     +build(input_shape:list[int])
     +call(inputs:list[Tensor])
     +filters: int
@@ -50,7 +50,7 @@ title Keras - Composite
     
 }
 
-+class Functional extends Model {
++class Functional {
     #_self_tracked_trackables:list[Layer]
     +input(): list[Tensor]
     +output(): list[Tensor]
@@ -69,8 +69,13 @@ title Keras - Composite
 }
 
 Sequential .left.> Layer : use
-Functional -left-> Layer
+Functional -right-> Layer
+Functional -up-|> Model
+Model -right-|> Layer
 client --> Layer
+Conv -up-|> Layer
+RNN -left-|> Layer
+
 
 
 
