@@ -1,0 +1,37 @@
+@startuml
+
+title Keras - Iterator
+
++class Iterator  {
+
+}
+
++class DirectoryIterator extends Iterator {
+   
+}
+
++class NumpyArrayIterator extends Iterator {
+       
+}
+  
+
++class DataFrameIterator extends Iterator {
+     
+}
+
++class ImageDataGenerator {
+    +flow(): Iterator
+    +flow_from_directory(): Iterator
+    +flow_from_dataframe(): Iterator
+}
+
++class cilent{
+
+}
+
+ImageDataGenerator -up[dashed]-> DataFrameIterator
+ImageDataGenerator -up[dashed]-> NumpyArrayIterator
+ImageDataGenerator -up[dashed]-> DirectoryIterator
+
+cilent -left-> Iterator
+@enduml
