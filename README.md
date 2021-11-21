@@ -1,11 +1,11 @@
-# keras_softarch_assignment
--ไฟล์รายงานชื่อ keras_softarch_report
+# Software Architecture Course Assignment : Keras
+- ไฟล์รายงานชื่อ keras_softarch_report
 
--folder uml_diagram จะเก็บพวกรูปภาพ diagram และ source file ที่ทำใน plantuml
+- folder uml_diagram จะเก็บพวกรูปภาพ diagram และ source file ที่ทำใน plantuml
 
--ไฟล์ presentation ชื่อ Software Architecture and Design_ Presentation Slide
+- ไฟล์ presentation ชื่อ Software Architecture and Design_ Presentation Slide
 
-จัดทำโดย
+## จัดทำโดย
 
 62010525 นายปภังกร ธนโรจน์
 
