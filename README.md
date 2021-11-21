@@ -1,6 +1,7 @@
 # keras_softarch_assignment
-	*ไฟล์รายงานชื่อ keras_softarch_report
-	*folder uml_diagram จะเก็บพวกรูปภาพ diagram และ source file ที่ทำใน plantuml
+-ไฟล์รายงานชื่อ keras_softarch_report
+-folder uml_diagram จะเก็บพวกรูปภาพ diagram และ source file ที่ทำใน plantuml
+
 จัดทำโดย
 62010525 นายปภังกร ธนโรจน์
 62010602 นายพลพัฒน์ สงวนสิริกุล
