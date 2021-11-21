@@ -7,15 +7,15 @@
 
 ## จัดทำโดย
 
-62010525 นายปภังกร ธนโรจน์
+<a href="https://github.com/pholpaphankorn" target="_blank">62010525 นายปภังกร ธนโรจน์</a>
 
-62010602 นายพลพัฒน์ สงวนสิริกุล
+<a href="https://github.com/ppbasleng" target="_blank">62010602 นายพลพัฒน์ สงวนสิริกุล</a>
 
-62010604 นายพลภัทร จงวัฒนศิริ
+<a href="https://github.com/phlpat" target="_blank">62010604 นายพลภัทร จงวัฒนศิริ</a>
 
 <a href="https://github.com/Chuckboliver" target="_blank">62010615 นายพัฒน์ภูมิ หาแก้ว</a>
 
-62010619 นายพัทธพล จันทร์ชู
+<a href="https://github.com/pjpure" target="_blank">62010619 นายพัทธพล จันทร์ชู
 
-62010785 นายลิขิตภูมิ ลิขิตงาม
+<a href="https://github.com/Kumnoob" target="_blank">62010785 นายลิขิตภูมิ ลิขิตงาม</a>
 
