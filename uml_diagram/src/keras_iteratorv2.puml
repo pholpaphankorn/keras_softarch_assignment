@@ -136,4 +136,5 @@ ImageDataGenerator -up[dashed]-> NumpyArrayIterator
 ImageDataGenerator -up[dashed]-> DirectoryIterator
 
 client -left-> Iterator
+client -left-> ImageDataGenerator
 @enduml
