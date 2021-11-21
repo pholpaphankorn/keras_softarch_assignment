@@ -3,6 +3,8 @@
 
 -folder uml_diagram จะเก็บพวกรูปภาพ diagram และ source file ที่ทำใน plantuml
 
+-ไฟล์ presentation ชื่อ Software Architecture and Design_ Presentation Slide
+
 จัดทำโดย
 
 62010525 นายปภังกร ธนโรจน์
