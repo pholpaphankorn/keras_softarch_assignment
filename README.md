@@ -1,35 +1,11 @@
 # keras_softarch_assignment
-### TO-DO list:
+	*ไฟล์รายงานชื่อ keras_softarch_report
+	*folder uml_diagram จะเก็บพวกรูปภาพ diagram และ source file ที่ทำใน plantuml
+จัดทำโดย
+62010525 นายปภังกร ธนโรจน์
+62010602 นายพลพัฒน์ สงวนสิริกุล
+62010604 นายพลภัทร จงวัฒนศิริ
+62010615 นายพัฒน์ภูมิ หาแก้ว
+62010619 นายพัทธพล จันทร์ชู
+62010785 นายลิขิตภูมิ ลิขิตงาม
 
-1. (พลกำลังทำ)หาและอธิบาย Architectural Styles ของ keras หรือ Architectural Styles ของระบบที่ keras ถูกใช้
-	* [x] วาด UML Diagram(ไม่จำเป็นต้องเป็น class diagram ขอให้เข้าใจง่าย)อย่างน้อย 1 Diagram สำหรับ Architectural Styles ที่หามา
-	
-2. (ยังไม่ได้ทำ)หาและอธิบาย quality attributes ของ keras อย่างน้อย 3 ตัวโดยรายละเอียดมีดังนี้:
-	* [ ] ให้เหตุผลว่าทำไมคนสร้าง kerasถึงเลือกใช้ quality attributes ตัวนี้
-	* [ ] หาและอธิบายว่าคนสร้าง kerasใช้วิธีการอะไรในการทำให้ตอบโจทย์ quality attributes ตัวนั้น
-	* [ ] หาข้อเสียที่เป็น quality attributes อย่างน้อย 1 จุด และนำเสนอวิธีการแก้ไขข้อเสียตรงนั้น 
-	* [ ] หาหลักฐานมา support แต่ละข้อในข้อ 2(อาจจะเป็น documentationหรือ source code โดยระบุ link และ บรรทัด code) 
-	
-3. (เจอแล้ว4ตัวแต่ยังไม่ได้ทำไร)หา design pattern 4 ตัวโดยรายละเอียดมีดังนี้:
-	* [ ] อธิบายว่าทำไมแต่ละตัวถึงถูกใช้ใน keras และเหมาะสมยังไง
-	* [x] ระบุ source file และบรรทัด code
-	* [ ] (optional-มีไม่มีก็ได้) documentation หรือ commend ของ developer
-	* [ ] วาด class diagram สำหรับ design pattern แต่ละตัวที่หามา
-	```sh
-	- Patpum Hakaew วาด UML ของ Adapter Pattern 
-	```
-	
-4. นำเสนอ 15 นาทีเหมือนอาจารย์จะให้พูดทุกคนโดยมีรายละเอียดคร่าวๆดังนี้ - นำเสนอวันที่ 22 พ.ย. 64
-	* [ ] introduction ของ keras ว่าคืออะไรและใช้ทำอะไรคร่าวๆ
-	* [ ] อธิบายผลลัพธ์จากการวิเคราะห์ Architectural Stylesของ keras และให้ดู UML diagram
-	* [ ] อธิบายผลลัพธ์จากการวิเคราะห์ design pattern ของ keras และให้ดู UML diagram หรือ code บางส่วน
-
-### 1. Architectural Styles ของ keras เป็นแบบ Layered
-	
-	
-	
-### 3. Design pattern ที่หาเจอและน่าจะถูกต้อง:
-	1. Decorator(class Wrappers) - https://github.com/keras-team/keras/blob/v2.6.0/keras/layers/wrappers.py
-	2. Iterator(class Iterator) - https://github.com/keras-team/keras/blob/v2.6.0/keras/preprocessing/image.py#L318-L319
-	3. Composite(class Sequential) - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/sequential.py#L41-L467
-	4. Adapter(class DataAdapter) - https://github.com/keras-team/keras/blob/v2.6.0/keras/engine/data_adapter.py
